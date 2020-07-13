@@ -15,4 +15,8 @@ export class RandomElementComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {}
+
+    onImgError(event) {
+        event.target.src = "assets/images/no_image.jpg";
+    }
 }

@@ -1,5 +1,5 @@
 <div class="random-element">
-    <img class="photo" alt="random image" src="{{ randomElement.photo }}" />
+    <img class="photo" alt="random image" src="{{ randomElement.photo }}" (error)="onImgError($event)" />
     <div class="content">
         <h2 class="id">
             {{ randomElement.id }}
