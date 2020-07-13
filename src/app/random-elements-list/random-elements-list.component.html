@@ -1,6 +1,6 @@
 <div class="random-elements-list-container">
-    <cdk-virtual-scroll-viewport itemSize="500" class="example-viewport">
-        <div *cdkVirtualFor="let randomElement of randomElements" class="example-item">
+    <cdk-virtual-scroll-viewport itemSize="200" class="viewport">
+        <div *cdkVirtualFor="let randomElement of randomElements" class="random-element-container">
             <app-random-element [randomElement]="randomElement"></app-random-element>
         </div>
     </cdk-virtual-scroll-viewport>

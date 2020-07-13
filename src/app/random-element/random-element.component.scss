@@ -1,6 +1,11 @@
 .random-element {
     display: flex;
 
+    .photo {
+        width: 200px;
+        height: 200px;
+    }
+
     .content {
         margin-left: 16px;
     }

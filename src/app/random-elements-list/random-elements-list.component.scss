@@ -1,12 +1,18 @@
 .random-elements-list-container {
     height: 95vh;
+    padding: 8px;
 
-    .example-viewport {
+    .viewport {
         height: 100%;
-        border: 1px solid black;
 
-        .example-item {
-            height: 500px;
+        .random-element-container {
+            height: 200px;
+            margin-bottom: 16px;
+            margin-right: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }
