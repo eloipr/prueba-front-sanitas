@@ -10,6 +10,7 @@ import { RandomElement } from "../random-element";
 })
 export class RandomElementComponent implements OnInit {
     @Input() randomElement: RandomElement;
+    @Input() searchText: string;
 
     constructor() {}
 

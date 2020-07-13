@@ -4,8 +4,6 @@
         <h2 class="id">
             {{ randomElement.id }}
         </h2>
-        <div class="text">
-            {{ randomElement.text }}
-        </div>
+        <div class="text" [innerHTML]="randomElement.text | highlight: searchText"></div>
     </div>
 </div>

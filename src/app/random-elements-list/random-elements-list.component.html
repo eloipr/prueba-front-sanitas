@@ -14,7 +14,7 @@
             *cdkVirtualFor="let randomElement of randomElements | filterList: { id: idFilter, text: textFilter }"
             class="random-element-container"
         >
-            <app-random-element [randomElement]="randomElement"></app-random-element>
+            <app-random-element [randomElement]="randomElement" [searchText]="textFilter"></app-random-element>
         </div>
     </cdk-virtual-scroll-viewport>
 </div>
