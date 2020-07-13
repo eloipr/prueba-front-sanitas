@@ -18,7 +18,7 @@ export class FilterListPipe implements PipeTransform {
         }
 
         if (filter.text !== "") {
-            filteredItems = filteredItems.filter((item) => item.text.includes(filter.text));
+            filteredItems = filteredItems.filter((item) => item.text.toLowerCase().includes(filter.text.toLowerCase()));
         }
 
         return filteredItems;
