@@ -9,10 +9,22 @@ import { RandomElement } from "../random-element";
     styleUrls: ["./random-elements-list.component.scss"],
 })
 export class RandomElementsListComponent implements OnInit {
+    idFilter: string = "";
+    textFilter: string = "";
+
     randomElements: RandomElement[] = [];
     constructor(private randomElementsService: RandomElementsService) {}
 
     ngOnInit() {
         this.randomElements = this.randomElementsService.getElements();
+    }
+
+    idFilterChanged(value: string) {
+        console.log(value);
+        this.idFilter = value;
+    }
+
+    textFilterChanged(value: string) {
+        this.textFilter = value;
     }
 }

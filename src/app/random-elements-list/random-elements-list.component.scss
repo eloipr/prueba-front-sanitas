@@ -1,6 +1,25 @@
+.filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    width: 30%;
+    min-width: 300px;
+
+    .filter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
 .random-elements-list-container {
-    height: 95vh;
-    padding: 8px;
+    height: 80vh;
 
     .viewport {
         height: 100%;

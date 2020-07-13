@@ -1,6 +1,19 @@
+<div class="filters">
+    <div class="filter">
+        <label>Filter by id:</label>
+        <input type="text" name="id" (keyup)="idFilterChanged($event.target.value)" />
+    </div>
+    <div class="filter">
+        <label>Filter by text:</label>
+        <input type="text" name="text" (keyup)="textFilterChanged($event.target.value)" />
+    </div>
+</div>
 <div class="random-elements-list-container">
     <cdk-virtual-scroll-viewport itemSize="200" class="viewport">
-        <div *cdkVirtualFor="let randomElement of randomElements" class="random-element-container">
+        <div
+            *cdkVirtualFor="let randomElement of randomElements | filterList: { id: idFilter, text: textFilter }"
+            class="random-element-container"
+        >
             <app-random-element [randomElement]="randomElement"></app-random-element>
         </div>
     </cdk-virtual-scroll-viewport>
