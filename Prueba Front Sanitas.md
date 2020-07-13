@@ -5,7 +5,7 @@ Dada la siguiente url
 
 ## 1º Generar un Json de 4000 elementos
 
-Generar un Array/Json de 4000 elementos con la siguiente estructura
+Generar un Array/Json random de 4000 elementos con la siguiente estructura
 
     [
         {
@@ -30,16 +30,17 @@ Añadir un filtro que permita buscar por el ID de la imagen y por el texto
 Se valorará el uso de test unitarios, E2E y componentes
 
 ## 5º Inicialización del proyecto
+
 Bastará con inicializar un proyecto en blanco mediante el CLI de Ionic o el CLI de Angular dependiendo del puesto si es web o mobile.
 
 Mobile
-    ionic start test_app blank
+ionic start test_app blank
 
 Web
-    ng new test_app
-	
+ng new test_app
 
 ## 6º Dudas
+
 Cualquier duda enviar mail a arquitecturamobile@sanitas.es
 
 El proyecto se debe subir a algun repositorio publico (github, gitlab) para poder revisar la prueba

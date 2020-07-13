@@ -1,0 +1,12 @@
+.random-elements-list-container {
+    height: 95vh;
+
+    .example-viewport {
+        height: 100%;
+        border: 1px solid black;
+
+        .example-item {
+            height: 500px;
+        }
+    }
+}

@@ -1,6 +1,7 @@
-<p>elements-list works!</p>
-<ul>
-    <li *ngFor="let randomElement of randomElements">
-        <app-random-element [randomElement]="randomElement"></app-random-element>
-    </li>
-</ul>
+<div class="random-elements-list-container">
+    <cdk-virtual-scroll-viewport itemSize="500" class="example-viewport">
+        <div *cdkVirtualFor="let randomElement of randomElements" class="example-item">
+            <app-random-element [randomElement]="randomElement"></app-random-element>
+        </div>
+    </cdk-virtual-scroll-viewport>
+</div>
