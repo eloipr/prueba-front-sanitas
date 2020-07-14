@@ -19,6 +19,7 @@ describe("workspace-project App", () => {
         page.navigateTo();
         const textInput = page.getTextInput();
         textInput.sendKeys("aliqua duis ullamco");
+        // TODO will fail every time the json is generated again
         expect(page.getRandomElementsId()).toEqual(["1", "609", "1739"]);
     });
 
