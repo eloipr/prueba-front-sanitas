@@ -1,7 +1,7 @@
-import { Pipe, PipeTransform } from "@angular/core";
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-    name: "highlight",
+    name: 'highlight',
 })
 export class HighlightPipe implements PipeTransform {
     transform(value: string, searchText: string): any {
@@ -9,14 +9,14 @@ export class HighlightPipe implements PipeTransform {
             return value;
         }
 
-        const re = new RegExp(searchText, "gi");
+        const re = new RegExp(searchText, 'gi');
         const match = value.match(re);
 
         if (!match) {
             return value;
         }
 
-        const result = value.replace(re, (substring) => "<mark>" + substring + "</mark>");
+        const result = value.replace(re, (substring) => `<mark>${substring}</mark>`);
         return result;
     }
 }

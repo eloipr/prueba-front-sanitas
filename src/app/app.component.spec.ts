@@ -1,9 +1,9 @@
-import { TestBed, async } from "@angular/core/testing";
+import { TestBed, async } from '@angular/core/testing';
 
-import { AppComponent } from "./app.component";
-import { RandomElementsModule } from "./random-elements/random-elements.module";
+import { AppComponent } from './app.component';
+import { RandomElementsModule } from './random-elements/random-elements.module';
 
-describe("AppComponent", () => {
+describe('AppComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [AppComponent],
@@ -11,15 +11,9 @@ describe("AppComponent", () => {
         }).compileComponents();
     }));
 
-    it("should create the app", () => {
+    it('should create the app', () => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
-    });
-
-    it(`should have as title 'prueba-front-sanitas'`, () => {
-        const fixture = TestBed.createComponent(AppComponent);
-        const app = fixture.debugElement.componentInstance;
-        expect(app.title).toEqual("prueba-front-sanitas");
     });
 });

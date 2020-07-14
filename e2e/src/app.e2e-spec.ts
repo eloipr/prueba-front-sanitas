@@ -1,26 +1,26 @@
-import { AppPage } from "./app.po";
-import { browser, logging } from "protractor";
+import { AppPage } from './app.po';
+import { browser, logging } from 'protractor';
 
-describe("workspace-project App", () => {
+describe('workspace-project App', () => {
     let page: AppPage;
 
     beforeEach(() => {
         page = new AppPage();
     });
 
-    it("should display the element with id 153", () => {
+    it('should display the element with id 153', () => {
         page.navigateTo();
         const idInput = page.getIdInput();
-        idInput.sendKeys("153");
-        expect(page.getRandomElementsId()).toEqual(["153"]);
+        idInput.sendKeys('153');
+        expect(page.getRandomElementsId()).toEqual(['153']);
     });
 
-    it("should display the elements with the text 'aliqua duis ullamco'", () => {
+    it('should display the elements with the text "aliqua duis ullamco"', () => {
         page.navigateTo();
         const textInput = page.getTextInput();
-        textInput.sendKeys("aliqua duis ullamco");
+        textInput.sendKeys('aliqua duis ullamco');
         // TODO will fail every time the json is generated again
-        expect(page.getRandomElementsId()).toEqual(["1", "609", "1739"]);
+        expect(page.getRandomElementsId()).toEqual(['1', '609', '1739']);
     });
 
     afterEach(async () => {

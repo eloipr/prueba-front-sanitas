@@ -1,4 +1,4 @@
-import { browser, by, element, ElementArrayFinder } from "protractor";
+import { browser, by, element, ElementArrayFinder } from 'protractor';
 
 export class AppPage {
     navigateTo() {
@@ -6,14 +6,14 @@ export class AppPage {
     }
 
     getRandomElementsId() {
-        return element.all(by.css(".random-element .id")).getText();
+        return element.all(by.css('.random-element .id')).getText();
     }
 
     getIdInput() {
-        return element(by.css("input[name='id'"));
+        return element(by.css(`input[name='id']`));
     }
 
     getTextInput() {
-        return element(by.css("input[name='text'"));
+        return element(by.css(`input[name='text']`));
     }
 }

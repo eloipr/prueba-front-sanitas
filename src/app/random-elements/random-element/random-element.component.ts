@@ -1,11 +1,11 @@
-import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
-import { RandomElement } from "../random-element";
+import { RandomElement } from '../random-element';
 
 @Component({
-    selector: "app-random-element",
-    templateUrl: "./random-element.component.html",
-    styleUrls: ["./random-element.component.scss"],
+    selector: 'app-random-element',
+    templateUrl: './random-element.component.html',
+    styleUrls: ['./random-element.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RandomElementComponent {
@@ -13,6 +13,6 @@ export class RandomElementComponent {
     @Input() searchText: string;
 
     onImgError(event) {
-        event.target.src = "assets/images/no_image.jpg";
+        event.target.src = 'assets/images/no_image.jpg';
     }
 }

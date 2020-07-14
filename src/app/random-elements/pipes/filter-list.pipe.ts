@@ -1,9 +1,9 @@
-import { Pipe, PipeTransform } from "@angular/core";
+import { Pipe, PipeTransform } from '@angular/core';
 
-import { RandomElement } from "../random-element";
+import { RandomElement } from '../random-element';
 
 @Pipe({
-    name: "filterList",
+    name: 'filterList',
 })
 export class FilterListPipe implements PipeTransform {
     transform(items: RandomElement[], filter: { id: string; text: string }): any {
@@ -13,11 +13,11 @@ export class FilterListPipe implements PipeTransform {
 
         let filteredItems = items;
 
-        if (filter.id !== "") {
+        if (filter.id !== '') {
             filteredItems = filteredItems.filter((item) => item.id.toString() === filter.id);
         }
 
-        if (filter.text !== "") {
+        if (filter.text !== '') {
             filteredItems = filteredItems.filter((item) => item.text.toLowerCase().includes(filter.text.toLowerCase()));
         }
 
