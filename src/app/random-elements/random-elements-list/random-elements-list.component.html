@@ -1,10 +1,10 @@
 <div class="filters">
     <div class="filter">
-        <label>Filter by id:</label>
+        <label>{{ idInputLabel }}</label>
         <input type="text" name="id" (keyup)="idFilterChanged($event.target.value)" />
     </div>
     <div class="filter">
-        <label>Filter by text:</label>
+        <label>{{ textInputLabel }}</label>
         <input type="text" name="text" (keyup)="textFilterChanged($event.target.value)" />
     </div>
 </div>

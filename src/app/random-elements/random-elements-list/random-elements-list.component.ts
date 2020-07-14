@@ -9,6 +9,9 @@ import { RandomElement } from '../random-element';
     styleUrls: ['./random-elements-list.component.scss'],
 })
 export class RandomElementsListComponent implements OnInit {
+    idInputLabel = 'Filter by id:';
+    textInputLabel = 'Filter by text:';
+
     idFilter = '';
     textFilter = '';
 
