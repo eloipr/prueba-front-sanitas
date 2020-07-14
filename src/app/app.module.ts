@@ -1,16 +1,12 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { ScrollingModule } from "@angular/cdk/scrolling";
 
 import { AppComponent } from "./app.component";
-import { RandomElementsListComponent } from "./random-elements-list/random-elements-list.component";
-import { RandomElementComponent } from "./random-element/random-element.component";
-import { FilterListPipe } from './filter-list.pipe';
-import { HighlightPipe } from './highlight.pipe';
+import { RandomElementsModule } from "./random-elements/random-elements.module";
 
 @NgModule({
-    declarations: [AppComponent, RandomElementsListComponent, RandomElementComponent, FilterListPipe, HighlightPipe],
-    imports: [BrowserModule, ScrollingModule],
+    declarations: [AppComponent],
+    imports: [BrowserModule, RandomElementsModule],
     providers: [],
     bootstrap: [AppComponent],
 })

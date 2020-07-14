@@ -1,5 +1,5 @@
 import { FilterListPipe } from "./filter-list.pipe";
-import { RandomElement } from "./random-element";
+import { RandomElement } from "../random-element";
 
 const testElements: RandomElement[] = [
     {

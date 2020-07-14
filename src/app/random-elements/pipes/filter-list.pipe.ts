@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from "@angular/core";
 
-import { RandomElement } from "./random-element";
+import { RandomElement } from "../random-element";
 
 @Pipe({
     name: "filterList",
