@@ -13,6 +13,7 @@ export class RandomElementsListComponent implements OnInit {
     textFilter: string = "";
 
     randomElements: RandomElement[] = [];
+
     constructor(private randomElementsService: RandomElementsService) {}
 
     ngOnInit() {
@@ -20,7 +21,6 @@ export class RandomElementsListComponent implements OnInit {
     }
 
     idFilterChanged(value: string) {
-        console.log(value);
         this.idFilter = value;
     }
 
