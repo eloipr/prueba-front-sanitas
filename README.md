@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Generate random json
 
+**The json is already generated. Generating it again will cause the failure of some e2e tests.**
+
 To generate the json run `npm run generate_json`. The script json_generator.js will be executed and the json file will be created in src/assets/elements.json.
 
 ## Development server

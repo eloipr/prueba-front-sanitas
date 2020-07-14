@@ -1,5 +1,4 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
 
 describe('workspace-project App', () => {
     let page: AppPage;
@@ -8,28 +7,35 @@ describe('workspace-project App', () => {
         page = new AppPage();
     });
 
-    it('should display the element with id 153', () => {
-        page.navigateTo();
-        const idInput = page.getIdInput();
-        idInput.sendKeys('153');
-        expect(page.getRandomElementsId()).toEqual(['153']);
+    describe('filter by id', () => {
+        it('should display the element with id 153', () => {
+            page.navigateTo();
+            const idInput = page.getIdInput();
+            idInput.sendKeys('153');
+            expect(page.getRandomElementsId()).toEqual(['153']);
+        });
+
+        it('should not display any element', () => {
+            page.navigateTo();
+            const idInput = page.getIdInput();
+            idInput.sendKeys('4500');
+            expect(page.getRandomElementsId()).toEqual([]);
+        });
     });
 
-    it('should display the elements with the text "aliqua duis ullamco"', () => {
-        page.navigateTo();
-        const textInput = page.getTextInput();
-        textInput.sendKeys('aliqua duis ullamco');
-        // TODO will fail every time the json is generated again
-        expect(page.getRandomElementsId()).toEqual(['1', '609', '1739']);
-    });
+    describe('filter by text', () => {
+        it('should display the elements with the text "aliqua duis ullamco"', () => {
+            page.navigateTo();
+            const textInput = page.getTextInput();
+            textInput.sendKeys('aliqua duis ullamco');
+            expect(page.getRandomElementsId()).toEqual(['1', '609', '1739']);
+        });
 
-    afterEach(async () => {
-        // Assert that there are no errors emitted from the browser
-        const logs = await browser.manage().logs().get(logging.Type.BROWSER);
-        expect(logs).not.toContain(
-            jasmine.objectContaining({
-                level: logging.Level.SEVERE,
-            } as logging.Entry)
-        );
+        it('should not display any element', () => {
+            page.navigateTo();
+            const textInput = page.getTextInput();
+            textInput.sendKeys('Buenas noches');
+            expect(page.getRandomElementsId()).toEqual([]);
+        });
     });
 });
