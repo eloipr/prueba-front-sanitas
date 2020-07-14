@@ -9,4 +9,14 @@ describe("RandomElementsService", () => {
         const service: RandomElementsService = TestBed.get(RandomElementsService);
         expect(service).toBeTruthy();
     });
+
+    describe("#getElements", () => {
+        it("should return 4000 elements", () => {
+            const service: RandomElementsService = TestBed.get(RandomElementsService);
+
+            const elements = service.getElements();
+
+            expect(elements.length).toBe(4000);
+        });
+    });
 });
