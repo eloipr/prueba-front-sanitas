@@ -16,7 +16,7 @@ export class HighlightPipe implements PipeTransform {
             return value;
         }
 
-        const result = value.replace(re, "<mark>" + match[0] + "</mark>");
+        const result = value.replace(re, (substring) => "<mark>" + substring + "</mark>");
         return result;
     }
 }
