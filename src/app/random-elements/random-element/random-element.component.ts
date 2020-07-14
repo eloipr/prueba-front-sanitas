@@ -8,13 +8,9 @@ import { RandomElement } from "../random-element";
     styleUrls: ["./random-element.component.scss"],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RandomElementComponent implements OnInit {
+export class RandomElementComponent {
     @Input() randomElement: RandomElement;
     @Input() searchText: string;
-
-    constructor() {}
-
-    ngOnInit() {}
 
     onImgError(event) {
         event.target.src = "assets/images/no_image.jpg";
